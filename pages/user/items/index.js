@@ -13,6 +13,7 @@ import SnackbarTag from '../../../Components/Snackbar/Snackbar';
 import { columns } from '../../../Components/DataTabel/Items/Column';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Link from 'next/link';
 
 const Items = () => {
     const router = useRouter();
@@ -78,13 +79,13 @@ const Items = () => {
                     ) : (
                         <>
                             <h2 style={{ opacity: ".5" }}>
-                                You haven't added any medicine yet.
+                                You haven&rsquo;t added any medicine yet.
                             </h2>
                             <span style={{ opacity: '.5', fontWeight: '500' }}>
                                 Click here to add medicine -{' '}
-                                <a href='/user/purchase-medicine' style={{ color: 'blue' }}>
+                                <Link href='/user/purchase-medicine' style={{ color: 'blue' }}>
                                     Purchase medicine
-                                </a>
+                                </Link>
                             </span>
                         </>
                     )}
@@ -105,3 +106,4 @@ const Items = () => {
 };
 
 export default Items;
+
